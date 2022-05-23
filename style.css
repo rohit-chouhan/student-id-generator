@@ -1,0 +1,103 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-box {
+    border:1px solid black;
+    width: 450px;
+    padding: 10px;
+}
+
+#field {
+    padding: 5px;
+    text-align: left;
+}
+
+#field_data {
+    text-align: left;
+}
+
+#field_data p{
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+.add_btn {
+    border: 1px solid black;
+    background-color: white;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.add_btn:hover{
+    opacity: 0.8;
+}
+
+.id-card {
+    border-radius: 5px;
+    border:1px solid black;
+    width: 450px;
+   
+}
+
+.box {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.photo {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    margin-left: 30px;
+}
+
+
+.popup-wrapper {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+	position:relative;
+}
+
+/* The Close Button */
+.close {
+    color: #FFFFFF;
+    float: right;
+    font-size: 21px;
+    background: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 2px 5px;
+    border: 1px #FFFFFF solid;
+    font-family: arial;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

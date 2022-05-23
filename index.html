@@ -1,0 +1,115 @@
+<!--
+    Created by Rohit Chouhan
+    Repository: https://github.com/rohit-chouhan/student-id-generator
+-->
+<html>
+  <head>
+    <title>Student Id Generator</title>
+    <meta name="author" description="rohitchouhan.com" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <div class="form-box">
+        <h3>ID Card Form</h3>
+        <div align="right">
+          <button id="myBtn" class="add_btn">Add New Field</button>
+        </div>
+        <div id="data">
+          <div id="field">
+            <label>Name</label>
+            <input
+              type="text"
+              onkeyup="getting('name',this.value)"
+              value="Rohit Chouhan"
+            />
+          </div>
+          <div id="field">
+            <label>DOB</label>
+            <input
+              type="date"
+              onchange="getting('dob',this.value)"
+              value="1998-08-16"
+            />
+          </div>
+          <div id="field">
+            <label>Class</label>
+            <input
+              type="text"
+              onkeyup="getting('class',this.value)"
+              value="BCA"
+            />
+          </div>
+          <div id="field">
+            <label>Photo</label>
+            <input type="file" accept="image/*" onchange="loadFile(event)" />
+          </div>
+        </div>
+      </div>
+      <br /><br /><br />
+
+      <br /><br /><br />
+      <div id="student_id" class="id-card">
+        <h3>Rohit Chouhan University</h3>
+        <div class="box">
+          <div id="_data" class="left-box">
+            <div id="field_data">
+              <p>
+                Name&nbsp;&nbsp;&nbsp;<span id="setname">Rohit Chouhan</span>
+              </p>
+            </div>
+            <div id="field_data">
+              <p>DOB&nbsp;&nbsp;&nbsp;<span id="setdob">1998-08-16</span></p>
+            </div>
+            <div id="field_data">
+              <p>Class&nbsp;&nbsp;&nbsp;<span id="setclass">BCA</span></p>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="photo">
+              <img
+                style="width: 100%; height: 100%"
+                id="student_image"
+                src="avatar.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <button class="add_btn" onclick="print_id()">Print Student ID</button>
+    </center>
+    <div id="contentPopup" class="popup-wrapper">
+      <!-- Modal content -->
+      <div class="popup-content">
+        <span class="close">X</span>
+        <div id="field">
+          <label>Field Label</label>
+          <input type="text" id="get_label" />
+        </div>
+        <div id="field">
+          <label>Field Type</label>
+          <select id="get_type">
+            <option value="text">Text</option>
+            <option value="date">Date</option>
+            <option value="number">Integer</option>
+          </select>
+          <br />
+          <br />
+          <br />
+          <div align="right">
+            <button
+              onclick="addfield()"
+              style="background-color: rgb(85, 188, 84); color: white"
+              class="add_btn"
+            >
+              Add Field
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="student.js"></script>
+</html>
